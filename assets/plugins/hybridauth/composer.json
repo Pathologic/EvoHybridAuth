@@ -1,0 +1,15 @@
+{
+  "name": "pathologic/evo-hybridauth",
+  "require": {
+    "hybridauth/hybridauth": "^2.8"
+  },
+  "autoload": {
+    "classmap": [
+      "../../lib/",
+      "model/",
+      "mgr/",
+      "../../snippets/DocLister/lib/",
+      "../../snippets/FormLister/lib/"
+    ]
+  }
+}

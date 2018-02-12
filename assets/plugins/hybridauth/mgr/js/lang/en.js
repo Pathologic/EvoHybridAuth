@@ -1,0 +1,15 @@
+_ehaLang = [];
+_ehaLang['please_wait'] = 'Please, wait.';
+_ehaLang['cancel'] = 'Cancel';
+_ehaLang['delete'] = 'Delete';
+_ehaLang['are_you_sure_to_delete'] = 'Are you sure to delete?';
+_ehaLang['error'] = 'Error';
+_ehaLang['delete_fail'] = 'Failed to delete.';
+_ehaLang['name'] = 'Name';
+_ehaLang['createdon'] = 'Created on';
+_ehaLang['server_error'] = 'Server error: ';
+_ehaLang['parse_error'] = 'Failed to process server response';
+_ehaLang['identifier'] = 'Identifier';
+_ehaLang['provider'] = 'Provider';
+_ehaLang['key'] = 'Field';
+_ehaLang['value'] = 'Value';

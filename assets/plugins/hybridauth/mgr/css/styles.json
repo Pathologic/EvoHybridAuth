@@ -1,0 +1,8 @@
+{
+  "styles": {
+    "EasyUICss" : {
+      "version":"1.5.2",
+      "src":"assets/js/easy-ui/themes/modx/easyui.css"
+    }
+  }
+}
