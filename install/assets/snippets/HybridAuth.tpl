@@ -10,4 +10,4 @@
  * @author      Vasiliy Naumkin (bezumkin@yandex.ru), Pathologic (m@xim.name)
  */
 
-require MODX_BASE_PATH.'assets/snippets/hybridauth/snippet.hybridauth.php';
+return require MODX_BASE_PATH.'assets/snippets/hybridauth/snippet.hybridauth.php';

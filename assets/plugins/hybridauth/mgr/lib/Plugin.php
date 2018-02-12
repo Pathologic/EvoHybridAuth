@@ -58,6 +58,7 @@ class Plugin extends \SimpleTab\Plugin
      */
     public function render()
     {
+        $this->createTable();
         $output = $this->prerender();
         if ($output !== false) {
             $ph = $this->getTplPlaceholders();

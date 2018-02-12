@@ -131,7 +131,7 @@ class UserService extends \autoTable
     public function createTable()
     {
         $this->query("
-        CREATE TABLE IF NOT EXISTS `{$this->makeTable($this->table)}` (
+        CREATE TABLE IF NOT EXISTS {$this->makeTable($this->table)} (
             `id` int(10) NOT NULL auto_increment,
             `internalKey` int(10) NOT NULL,
             `identifier` varchar(100) NOT NULL default '',
@@ -157,7 +157,7 @@ class UserService extends \autoTable
             `country` varchar(100) NOT NULL default '',
             `region` varchar(100) NOT NULL default '',
             `city` varchar(100) NOT NULL default '',
-            `zip` varchar(25) NOT NULL default ''
+            `zip` varchar(25) NOT NULL default '',
             PRIMARY KEY  (`id`),
             UNIQUE KEY `unique_fields` (`internalKey`,`provider`),
             KEY `identifier` (`identifier`)

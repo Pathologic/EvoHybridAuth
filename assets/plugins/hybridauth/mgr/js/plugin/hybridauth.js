@@ -85,6 +85,7 @@ var ehaHelper = {};
                     $(this).window('resize',{
                         width:contentWidth + 30.0
                     })
+                    $(this).window('center');
                 }
             });
         }
