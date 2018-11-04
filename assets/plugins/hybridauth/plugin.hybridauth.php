@@ -43,7 +43,7 @@ switch ($e->name) {
         }
         break;
     case 'OnWebAuthentication':
-        $e->_output[] = !empty($_SESSION['HybridAuth']['verified']);
+        $e->setOutput(!empty($_SESSION['HybridAuth']['verified']));
         unset($_SESSION['HybridAuth']['verified']);
         break;
     case 'OnWebLogout':
