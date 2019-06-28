@@ -43,7 +43,7 @@ switch ($e->name) {
         }
         break;
     case 'OnWebAuthentication':
-        $e->setOutput(!empty($_SESSION['HybridAuth']['verified']));
+        $modx->event->setOutput(!empty($_SESSION['HybridAuth']['verified']));
         unset($_SESSION['HybridAuth']['verified']);
         break;
     case 'OnWebLogout':
@@ -54,7 +54,7 @@ switch ($e->name) {
         global $modx_lang_attribute;
         $Plugin = new Plugin($modx, $modx_lang_attribute);
         if ($output = $Plugin->render()) {
-            $e->output($output);
+            $modx->event->addOutput($output);
         }
         break;
     case 'OnWebDeleteUser':
