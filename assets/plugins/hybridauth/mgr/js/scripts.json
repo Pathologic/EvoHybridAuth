@@ -12,6 +12,10 @@
       "version": "1.0.0",
       "src": "assets/plugins/hybridauth/mgr/js/plugin/hybridauth.js"
     },
+    "eha-lang-en": {
+      "version": "1.0.0",
+      "src": "assets/plugins/hybridauth/mgr/js/lang/en.js"
+    },
     "eha-lang-[+lang+]": {
       "version": "1.0.0",
       "src": "assets/plugins/hybridauth/mgr/js/lang/[+lang+].js"
