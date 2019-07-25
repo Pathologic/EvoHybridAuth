@@ -8,6 +8,7 @@ use \Hybrid_Endpoint;
 use \Hybrid_Provider_Model;
 use \Throwable;
 use \jsonHelper;
+use \Helpers\FS;
 
 /**
  * Class HybridAuth
@@ -67,7 +68,18 @@ class Wrapper
             'cookieName'     => 'WebLoginPE',
             'cookieLifetime' => 157680000,
             'debug'          => false
-        ), $pluginConfig, $this->modx->event->params);
+        ), $this->modx->event->params, $pluginConfig);
+        $boolValues = array('true' => true, 'false' => false);
+        foreach ($this->config as $key => &$value) {
+            if (isset($boolValues[$value])) {
+                $value = $boolValues[$value];
+            }
+        }
+        $fs = FS::getInstance();
+        $debug_dir = 'assets/cache/ha/';
+        if (!$fs->checkDir($debug_dir)) {
+            $fs->makeDir($debug_dir);
+        }
     }
 
 

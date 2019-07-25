@@ -1,0 +1,15 @@
+_ehaLang = [];
+_ehaLang['please_wait'] = 'Зачекайте будь-ласка.';
+_ehaLang['cancel'] = 'Скасувати';
+_ehaLang['delete'] = 'Видалити';
+_ehaLang['are_you_sure_to_delete'] = 'Ви впевнені, що хочете видалити запис?';
+_ehaLang['error'] = 'Помилка';
+_ehaLang['delete_fail'] = 'Не вдалось видалити.';
+_ehaLang['name'] = 'І\'мя';
+_ehaLang['createdon'] = 'Доданий';
+_ehaLang['server_error'] = 'Помилка сервера: ';
+_ehaLang['parse_error'] = 'Неможливо обробити відповідь сервера';
+_ehaLang['identifier'] = 'Ідентифікатор';
+_ehaLang['provider'] = 'Сервіс';
+_ehaLang['key'] = 'Поле';
+_ehaLang['value'] = 'Значення';
