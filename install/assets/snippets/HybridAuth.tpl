@@ -5,7 +5,7 @@
  * Social sign on for Evolution CMS.
  *
  * @category    snippet
- * @version 	1.0.2
+ * @version 	1.0.3
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  * @author      Vasiliy Naumkin (bezumkin@yandex.ru), Pathologic (m@xim.name)
  */

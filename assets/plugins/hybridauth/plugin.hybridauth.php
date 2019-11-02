@@ -51,7 +51,7 @@ switch ($e->name) {
         $HybridAuth->logout();
         break;
     case 'OnWUsrFormRender':
-        global $modx_lang_attribute;
+        $modx_lang_attribute = $modx->getConfig('lang_code');
         $Plugin = new Plugin($modx, $modx_lang_attribute);
         if ($output = $Plugin->render()) {
             $modx->event->addOutput($output);
