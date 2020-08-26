@@ -20,25 +20,30 @@ switch ($e->name) {
             }
         }
 
-        if (!empty($_REQUEST['hauth_action']) || !empty($_REQUEST['hauth_start']) || !empty($_REQUEST['hauth_done'])) {
-            /** @var EvoHybridAuth $HybridAuth */
-            $HybridAuth = new EvoHybridAuth($modx);
-            if (!empty($_REQUEST['hauth_action'])) {
-                switch ($_REQUEST['hauth_action']) {
-                    case 'login':
-                        if (!empty($_REQUEST['provider'])) {
-                            $HybridAuth->login($_REQUEST['provider']);
-                        } else {
+        if (isset($_SERVER['HTTP_USER_AGENT']) && preg_match('/bot|bots|crawl|slurp|spider|mediapartners|Lighthouse|FacebookExternalHit|Datanyze|Headless|Rippers|zgrab|Siteimprove|PetalBo
+t/i', $_SERVER['HTTP_USER_AGENT'])){
+            break;
+        } else {
+            if (!empty($_REQUEST['hauth_action']) || !empty($_REQUEST['hauth_start']) || !empty($_REQUEST['hauth_done'])) {
+                /** @var EvoHybridAuth $HybridAuth */
+                $HybridAuth = new EvoHybridAuth($modx);
+                if (!empty($_REQUEST['hauth_action'])) {
+                    switch ($_REQUEST['hauth_action']) {
+                        case 'login':
+                            if (!empty($_REQUEST['provider'])) {
+                                $HybridAuth->login($_REQUEST['provider']);
+                            } else {
+                                $HybridAuth->refresh();
+                            }
+                            break;
+                        case 'unbind':
+                            $HybridAuth->unbind($_REQUEST['provider']);
                             $HybridAuth->refresh();
-                        }
-                        break;
-                    case 'unbind':
-                        $HybridAuth->unbind($_REQUEST['provider']);
-                        $HybridAuth->refresh();
-                        break;
+                            break;
+                    }
+                } else {
+                    $HybridAuth->processAuth();
                 }
-            } else {
-                $HybridAuth->processAuth();
             }
         }
         break;
