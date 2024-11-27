@@ -280,7 +280,7 @@ class Wrapper
     {
         $this->userModel->create();
         $username = $profile['identifier'] . '@' . $profile['provider'];
-        $email = !empty($profile['emailVerified']) ? $profile['emailVerified'] : $profile['email'];
+        $email = !empty($profile['email_verified']) ? $profile['email_verified'] : $profile['email'];
         if (empty($email)) {
             $email = $username . '.noemail';
         }
